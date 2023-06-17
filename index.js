@@ -54,7 +54,7 @@ async function run() {
     const enrolledClassesCollection = client.db("sportsFeverdB").collection("selectedClasses")
     const paymentCollection = client.db("sportsFeverdB").collection("payment")
 
-
+//jwt
     app.post('/jwt', (req, res)=>{
       const user = req.body;
       const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1d'});
